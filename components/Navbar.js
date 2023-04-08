@@ -1,45 +1,11 @@
 import Link from "next/link"
-import { useDisclosure } from "@chakra-ui/react"
-import { useRef } from "react"
-import {
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    Button
-  } from '@chakra-ui/react'
+import react from "react"
 import Image from "next/image"
 
 
-
-
-
-export default function Navdrawer() {
-    
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = useRef()
-          
-            return (
-              <div className="md:hidden">
-                <div className="ml-auto">
-                    <Image ref={btnRef} priority onClick={onOpen} src='/hamicon.png' width={40} height={40}></Image>
-                </div>
-                <Drawer
-                  isOpen={isOpen}
-                  placement='left'
-                  onClose={onClose}
-                  finalFocusRef={btnRef}
-                >
-                  <DrawerOverlay />
-                  <DrawerContent>
-                    <DrawerCloseButton />
-                    <DrawerHeader>logo</DrawerHeader>
-          
-                    <DrawerBody>
-                    <div className="flex h-full flex-col gap-12 pr-12 pl-2 pt-12 ">
+export default function Navbar() {
+    return(
+        <div className="flex h-full flex-col gap-12 pr-12 pl-2 pt-12 ">
                         <div>
                             <Link href='/explore'><div className="flex gap-3 align-center items-center mb-3 text-2xl"><div><Image src="/search.png" height={28} width={28}/></div><div>Explore</div></div></Link>
                             <Link href='/profile'><div className="flex gap-3 align-center items-center mb-3 text-2xl"><div><Image src="/home.png" height={30} width={30}/></div><div>Profile</div></div></Link>
@@ -52,13 +18,5 @@ export default function Navdrawer() {
                             <div className="flex gap-4 text-2xl"><div><Image src="/logout.png" height={30} width={30}/></div><div>Log out</div></div>
                         </div>
         </div>
-                    </DrawerBody>
-          
-                    <DrawerFooter>
-                    </DrawerFooter>
-                  </DrawerContent>
-                </Drawer>
-              </div>
-            )
-          }
-    
+    )
+}
