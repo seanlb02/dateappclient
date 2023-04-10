@@ -24,8 +24,8 @@ export default function Navdrawer() {
           
             return (
               <div className="md:hidden">
-                <div className="ml-auto">
-                    <Image ref={btnRef} priority onClick={onOpen} src='/hamicon.png' width={40} height={40}></Image>
+                <div className="ml-auto p-2">
+                    <Image ref={btnRef} priority onClick={onOpen} src='/sidemenu.png' width={35} height={435}></Image>
                 </div>
                 <Drawer
                   isOpen={isOpen}
@@ -36,10 +36,10 @@ export default function Navdrawer() {
                   <DrawerOverlay />
                   <DrawerContent>
                     <DrawerCloseButton />
-                    <DrawerHeader>logo</DrawerHeader>
+                    <DrawerHeader className="bg-green-50">logo</DrawerHeader>
           
                     <DrawerBody>
-                    <div className="flex h-full flex-col gap-12 pr-12 pl-2 pt-12 ">
+                    <div className="flex h-full flex-col gap-12  pl-2 pt-12 ">
                         <div>
                             <Link href='/explore'><div className="flex gap-3 align-center items-center mb-3 text-2xl"><div><Image src="/search.png" height={28} width={28}/></div><div>Explore</div></div></Link>
                             <Link href='/profile'><div className="flex gap-3 align-center items-center mb-3 text-2xl"><div><Image src="/home.png" height={30} width={30}/></div><div>Profile</div></div></Link>

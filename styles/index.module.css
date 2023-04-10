@@ -1,23 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/* For Webkit-based browsers (Chrome, Safari and Opera) */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* For IE, Edge and Firefox */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-/* home page login/register CSS vanilla */
-
-
 
 
 /* Please ❤ this if you like it! */
@@ -31,9 +11,8 @@
 	font-size: 15px;
 	line-height: 1.7;
 	color: #c4c3ca;
-	background-color: #ffffff;
+	background-color: #1f2029;
 	overflow-x: hidden;
-  min-height: 100vh;
 }
 
 /* a {
@@ -53,22 +32,19 @@ p {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
-} */
-#h4 {
+}
+h4 {
   font-weight: 600;
-  color: #ffffff;
-} 
-#h6 span{
+}
+h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
-  color:#000000;
-}  
+}  */
 #section{
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: block;
 }
 #full-height{
   min-height: 100vh;
@@ -78,8 +54,8 @@ p {
   position: absolute;
   left: -9999px;
 }
-.checkbox:checked + #label,
-.checkbox:not(:checked) + #label{
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
   position: relative;
   display: block;
   text-align: center;
@@ -91,8 +67,8 @@ p {
   cursor: pointer;
   background-color: #ffeba7;
 }
-.checkbox:checked + #label:before,
-.checkbox:not(:checked) + #label:before{
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
   position: absolute;
   display: block;
   width: 36px;
@@ -110,7 +86,7 @@ p {
   font-size: 24px;
   transition: all 0.5s ease;
 }
-.checkbox:checked + #label:before {
+.checkbox:checked + label:before {
   transform: translateX(44px) rotate(-270deg);
 }
 
@@ -138,7 +114,7 @@ p {
 #card-front, #card-back {
   width: 100%;
   height: 100%;
-  background-color: #646bf8;
+  background-color: #2a2b38;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -159,10 +135,6 @@ p {
 }
 .checkbox:checked ~ #card-3d-wrap #card-3d-wrapper {
   transform: rotateY(180deg);
-}
-
-.checkbox {
-  display: none;
 }
 #center-wrap{
   position: absolute;
@@ -185,7 +157,6 @@ p {
 #form-style {
   padding: 13px 20px;
   padding-left: 55px;
-  margin-bottom: 20px;
   height: 48px;
   width: 100%;
   font-weight: 500;
@@ -195,7 +166,7 @@ p {
   letter-spacing: 0.5px;
   outline: none;
   color: #c4c3ca;
-  background-color: #ffffff;
+  background-color: #1f2029;
   border: none;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -308,7 +279,7 @@ p {
 
 
 
-#logo {
+.logo {
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -316,7 +287,7 @@ p {
 	z-index: 100;
 	transition: all 250ms linear;
 }
-#logo img {
+.logo img {
 	height: 26px;
 	width: auto;
 	display: block;
