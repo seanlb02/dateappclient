@@ -57,7 +57,7 @@ const age = "age"
         
         <></>
 }
-        <SimpleGrid ChildWidth='auto' className="p-3" minChildWidth="280px" spacing='60px'>
+        <SimpleGrid ChildWidth='auto' className="p-3"  minChildWidth="280px" spacing='60px'>
 
   
 
@@ -97,6 +97,6 @@ const age = "age"
 
 const styles = {
     hidden: "hidden",
-    grid: " overflow-y-scroll scrollbar-hide w-full h-full flex flex-col items-center",
+    grid: "absolute scrollbar-hide w-full overflow-y-scroll h-[82vh] flex flex-col items-center",
     image: "h-36 w-36",
 }

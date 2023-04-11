@@ -1,10 +1,14 @@
 import React from 'react'
+import Image from 'next/image'
 import Head from 'next/head'
-import Navdrawer from '@/components/Navdrawer'
-import Footer from '@/components/Footer'
-import Useraccount from '@/components/Useraccount'
+import Link from 'next/link'
 
-function Account() {
+import Navdrawer from '@/components/Navdrawer'
+import Useraccount from '@/components/Useraccount'
+import Footer from '@/components/Footer'
+import Chatwindow from '@/components/Chatwindow'
+
+function Chat() {
   return (
     <>
     <Head>
@@ -12,7 +16,7 @@ function Account() {
     </Head>
     <main className="font-roboto text-black flex flex-col h-[100vh] w-[100vw]">
         <Navdrawer/>
-        <Useraccount/>
+        <Chatwindow/>
         <Footer/>
 
     </main>
@@ -20,4 +24,4 @@ function Account() {
   )
 }
 
-export default Account
+export default Chat

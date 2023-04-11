@@ -33,7 +33,6 @@ export default function Feed() {
   <GridItem pl='2' className="flex  items-center" bg='whiteAlpha.200' area={'header'}>
     <div className="mr-auto"><Navdrawer/></div>
     
-    <div className="mr-auto">Logo</div>
   </GridItem>
   <GridItem className="md:flex xxs:hidden flex-col gap-4 pr-12 pt-12 pl-12" pl='2' bg='gray.100' area={'nav'}>
     <Navbar/>
