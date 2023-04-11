@@ -26,7 +26,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
  #bod{
-	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
@@ -117,8 +116,8 @@ p {
 
 #card-3d-wrap {
   position: relative;
-  width: 440px;
-  max-width: 100%;
+  width: 400px;
+  max-width: 80%;
   height: 400px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -146,6 +145,7 @@ p {
   position: absolute;
   border-radius: 6px;
   left: 0;
+  
   top: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;

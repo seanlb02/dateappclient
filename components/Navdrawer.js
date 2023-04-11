@@ -23,10 +23,13 @@ export default function Navdrawer() {
     const btnRef = useRef()
           
             return (
-              <div className="md:hidden">
-                <div className="ml-auto p-2">
-                    <Image ref={btnRef} priority onClick={onOpen} src='/sidemenu.png' width={35} height={435}></Image>
+              <div className="md:hidden items-center align-center flex ">
+                <div className="">
+                    <div className="ml-auto p-2 flex items-center ">
+                        <Image ref={btnRef} priority onClick={onOpen} src='/sidemenu.png' width={35} height={435}></Image>
+                    </div>
                 </div>
+                <div className="flex pl-32 center-self">Logo</div>
                 <Drawer
                   isOpen={isOpen}
                   placement='left'

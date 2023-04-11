@@ -7,6 +7,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 import Navdrawer from '@/components/Navdrawer'
 import ImageGrid from '@/components/Gallery'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,7 @@ export default function Feed() {
     <Head>
     
     </Head>
-    <main className="flex min-h-screen flex-col">
+    <main className="font-roboto text-black flex min-h-screen flex-col">
     <Grid className="min-h-screen overflow-y-hidden"
   templateAreas={{ base:`"header header" "nav main" "nav footer"`,
                    md:`"header header" "nav main" "nav main"`,
@@ -26,7 +27,7 @@ export default function Feed() {
   gridTemplateColumns={' 0.6fr 4fr'}
   
   gap='0'
-  color='blackAlpha.700'
+  color='blackAlpha.1000'
 
 >
   <GridItem pl='2' className="flex  items-center" bg='whiteAlpha.200' area={'header'}>
@@ -42,7 +43,7 @@ export default function Feed() {
     <ImageGrid/>
   </GridItem>
   <GridItem pl='0' className=" xs:flex md:hidden flex items-center justify-center" bg='white.50' area={'footer'}>
-    <div>Footer</div>
+    <Footer/>
   </GridItem>
 </Grid>
     </main>

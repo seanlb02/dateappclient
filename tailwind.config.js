@@ -14,6 +14,11 @@ module.exports = {
       'lg': '850px',
       'xlg': '1100px',
     },
+    fontFamily: {
+      roboto: ['Titillium Web', 'sans-serif'],
+
+
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

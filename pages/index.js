@@ -12,19 +12,19 @@ export default function Home() {
     <Head>
     
     </Head>
-    <main id="bod" className="flex min-h-screen flex-col items-center justify-center p-24">
+    <main id="bod" className="flex min-h-screen flex-col items-center justify-center">
      <>
       
 
-	<div id="section" class="flex bg-green-50 justify-center align-center w-fill items-center center-self">
+	<div id="section" class="font-roboto flex bg-green-50 justify-center align-center h-fit w-[100vw] items-center center-self">
 		<div id="container" class="container flex justify-center">
-			<div  className="row full-height justify-content-center">
-				<div class="col-12 text-center align-self-center py-5">
+			<div  className="flex row full-height justify-center">
+				<div class="flex  justify-center col-12 text-center align-self-center py-5">
 					<div id="section" class="flex flex-col pb-5 pt-5 pt-sm-2 text-center justify-center">
 						<h6 id="h6" class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
 			          <input className="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
 			          <label id="label" for="reg-log"></label>
-						<div id="card-3d-wrap" class="card-3d-wrap mx-auto">
+						<div id="card-3d-wrap" class="card-3d-wrap ml-12">
 							<div id="card-3d-wrapper">
 								<div id="card-front">
 									<div id="center-wrap">

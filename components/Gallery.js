@@ -65,9 +65,9 @@ const age = "age"
         {arr.map((el, index) => 
             
             <div className={appear} key={index}>
-                <Box className="relative" bg='white' height='350px'>
+                <Box className="relative" bg='white' height='320px' width='320px'>
                 <label><input type="checkbox" className="peer hidden"></input><Image src={url} className="relative object-cover rounded-t-2xl" fill></Image><span className="absolute hidden peer-checked:flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur justify-center items-end pb-24 text-white">Caption goes here</span></label>
-                <div className="flex absolute align-center w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl">
+                <div className="flex absolute align-center w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-xl">
                     <div className="flex  gap-3">
                         <div>{firstname},</div><div>Age</div>
                     </div>
@@ -97,6 +97,6 @@ const age = "age"
 
 const styles = {
     hidden: "hidden",
-    grid: " overflow-y-scroll scrollbar-hide w-full h-full",
+    grid: " overflow-y-scroll scrollbar-hide w-full h-full flex flex-col items-center",
     image: "h-36 w-36",
 }
