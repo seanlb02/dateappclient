@@ -11,6 +11,7 @@ function Setpreferences() {
 
     
     const [chosenLoc, setChosenLoc] = useState("");
+    const [chosenGender, setChosenGender] = useState();
     const [locSelected, setLocSelected] = useState(false)
     const [bioButton, setBioButton] = useState();
     const [locButton, setLocButton] = useState();
@@ -72,15 +73,12 @@ function Setpreferences() {
             <div className="flex p-2"><strong>Gender</strong></div>
             {genderButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-5 pb-8">
-                    <div className="flex w-[100vw] justify-center ">
-                    <select className="flex bg-white p-5 border-b-2 border-black w-full scrollbar-hide" onChange={(e) => setChosenLoc(e.target.value)}>
-                        <option>Select one</option>
-                        <option>Female</option>
-                        <option>Male</option>
-                        <option>Non-binary</option>
-                        <option>Other</option>
-                        <option>Trans</option>
-                    </select>                                
+                    <div className="flex flex-wrap w-[100vw] gap-1 justify-center text-sm">
+                            <><input type="checkbox" id="female" className="appearance-none peer/female"/><label for="female" id="loc" onClick={() => setChosenGender("")} className="flex cursor-pointer peer-checked/female:bg-black peer-checked/female:text-white hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Female</label></>
+                            <><input type="checkbox" id="male" className="appearance-none peer/male"/><label for="male" id="loc" onClick={() => setChosenGender("")} className="flex cursor-pointer peer-checked/male:bg-black peer-checked/male:text-white hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Male</label></>
+                            <><input type="checkbox" id="non" className="appearance-none peer/non"/><label for="non" id="loc" onClick={() => setChosenGender("")} className="flex cursor-pointer peer-checked/non:bg-black peer-checked/non:text-white hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Non-binary</label></>
+                            <><input type="checkbox" id="other" className="appearance-none peer/other"/><label for="other" id="loc" onClick={() => setChosenGender("")} className="flex cursor-pointer peer-checked/other:bg-black peer-checked/other:text-white hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Other</label></>
+                            <><input type="checkbox" id="trans" className="appearance-none peer/trans"/><label for="trans" id="loc" onClick={() => setChosenGender("")} className="flex cursor-pointer peer-checked/trans:bg-black peer-checked/trans:text-white hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Trans</label></> 
                     </div>
                 </div>
             

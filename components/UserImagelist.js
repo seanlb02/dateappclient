@@ -37,7 +37,7 @@ function handleTakePhoto (dataUri) {
     
     <div className={styles.grid}>
 
-        <SimpleGrid ChildWidth='auto' className="flex flex-col overflow-y-scroll scrollbar-hide h-fit w-auto items-center align-center p-6" minChildWidth="280px" spacing='60px'>
+        <SimpleGrid ChildWidth='auto' className="flex flex-col overflow-y-scroll scrollbar-hide h-fit w-auto items-center align-center scrollbar-hide" minChildWidth="280px" spacing='60px'>
   
   
         {/* <><Box onClick={() => setCamera(true)} className="relative border-2 object-contain" bg='white' height='350px'><Image className="object-contain p-20" src='/camera.png' fill sizes='auto'></Image></Box></> */}

@@ -37,14 +37,14 @@ function handleTakePhoto (dataUri) {
     
     <div className={styles.grid}>
 
-        <SimpleGrid ChildWidth='auto' className="flex flex-col overflow-y-scroll h-fit w-auto items-center align-center p-6" minChildWidth="280px" spacing='60px'>
+        <SimpleGrid ChildWidth='auto' className="flex flex-col overflow-y-scroll h-fit w-auto items-center align-center scrollbar-hide" minChildWidth="280px" spacing='60px'>
   
   
         {/* <><Box onClick={() => setCamera(true)} className="relative border-2 object-contain" bg='white' height='350px'><Image className="object-contain p-20" src='/camera.png' fill sizes='auto'></Image></Box></> */}
 
         {arr.map(el => 
             
-            <><Box  className="flex relative h-fit" bg='white' height='340px' width='340px'><Image className="object-cover" src={imageurl} fill></Image><div className=" absolute w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl"><div className="flex gap-2 text-sm"><Image src="/bin.png" width={25} height={10}></Image><div>Delete</div></div></div></Box></>
+            <><Box  className="flex relative h-fit" bg='white' height='340px' width='340px'><Image className="object-cover" src={imageurl} fill></Image><div className=" absolute w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl"><div className="flex gap-2 align-center items-center text-sm"><Image src="/bin.png" width={25} height={10}></Image><div>Delete</div></div></div></Box></>
         )}
     
     </SimpleGrid>

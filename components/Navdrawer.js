@@ -13,11 +13,13 @@ import {
   } from '@chakra-ui/react'
 import Image from "next/image"
 
-
+import { useRouter } from 'next/router'
 
 
 
 export default function Navdrawer() {
+
+    const router = useRouter();
     
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
@@ -25,11 +27,14 @@ export default function Navdrawer() {
             return (
               <div className="md:hidden items-center align-center flex ">
                 <div className="">
-                    <div className="ml-auto p-2 flex items-center ">
-                        <Image ref={btnRef} priority onClick={onOpen} src='/sidemenu.png' width={35} height={435}></Image>
+                    <div className=" p-2 pt-3 flex m-auto items-center w-[100vw]">
+                        <Image ref={btnRef} priority className="flex mr-auto ml-2" onClick={onOpen} src='/sidemenu.png' width={30} height={30}></Image>
+                        <div className="flex w-[100vw] m-auto z-40 justify-center">Logo</div>
+
+                        <Image onClick={() => router.back()} className="flex mr-4 ml-auto" src="/undo.png" height={25} width={25}/>
                     </div>
                 </div>
-                <div className="flex pl-32 center-self">Logo</div>
+                
                 <Drawer
                   isOpen={isOpen}
                   placement='left'
@@ -40,6 +45,7 @@ export default function Navdrawer() {
                   <DrawerContent>
                     <DrawerCloseButton />
                     <DrawerHeader className="bg-green-50">logo</DrawerHeader>
+                    
           
                     <DrawerBody>
                     <div className="flex h-full flex-col gap-12  pl-2 pt-12 ">

@@ -11,7 +11,7 @@ const [arr, setArr] = useState([1,1,1,1,1,1,1,1,1,1,1,1,11,1,,1,1,1,1,1,1,1,1,1,
   return (
     <>
     
-    <div className=" overflow-y-scroll scrollbar-hide w-full h-full md:w-[30vw]justify-center lg:rounded-3xl">
+    <div className=" overflow-y-scroll scrollbar-hide w-full h-[83vh] md:w-[30vw]justify-center lg:rounded-3xl">
     {arr.map(el => 
         <div className="flex align-center w-full h-fit p-3 items-center gap-3">
             <Link href="/users/xyz" className="flex items-center gap-3">
