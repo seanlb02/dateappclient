@@ -11,7 +11,15 @@ function Editprofile() {
 
     
     const [chosenLoc, setChosenLoc] = useState("");
-    const [locSelected, setLocSelected] = useState(false)
+    const [chosenGender, setChosenGender] = useState();
+    const [chosenHeight, setChosenHeight] = useState();
+    const [chosenSmoke, setChosenSmoke] = useState();
+    const [chosenDrink, setChosenDrink] = useState();
+    const [chosenChild, setChosenChild] = useState();
+
+    const [locSelected, setLocSelected] = useState(false);
+    const [genderSelected, setGenderSelected] = useState(false);
+
     const [bioButton, setBioButton] = useState();
     const [locButton, setLocButton] = useState();
     const [genderButton, setGenderButton] = useState();
@@ -97,7 +105,7 @@ function Editprofile() {
             {genderButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-5 pb-8">
                     <div className="flex w-[100vw] justify-center ">
-                    <select className="flex bg-white p-5 border-b-2 border-black w-full scrollbar-hide" onChange={(e) => setChosenLoc(e.target.value)}>
+                    <select className="flex bg-white p-5 border-b-2 border-black w-full scrollbar-hide" onChange={(e) => setChosenGender(e.target.value)}>
                         <option>Select one</option>
                         <option>Female</option>
                         <option>Male</option>
@@ -121,7 +129,7 @@ function Editprofile() {
             {heightButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-5 pb-8">
                     <div className="flex w-[100vw] justify-center ">
-                    <select className="flex bg-white p-5 border-b-2 border-black w-full scrollbar-hide" onChange={(e) => setChosenLoc(e.target.value)}>
+                    <select className="flex bg-white p-5 border-b-2 border-black w-full scrollbar-hide" onChange={(e) => setChosenHeight(e.target.value)}>
                         <option>Select</option>
                         {height.map((el, index) => <option>{el}cm</option>)}
                     </select>                                
@@ -141,9 +149,9 @@ function Editprofile() {
             {smokeButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-4 pb-8">
                     <div className="flex w-[100vw]  text-sm gap-2">
-                            <><input type="checkbox" id="smokeyes" className="appearance-none peer/yes"/><label for="smokeyes" id="yes" onClick={() => setChosenLoc("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Yes</label></>
-                            <><input type="checkbox" id="smokeno" className="appearance-none peer/no"/><label for="smokeno" id="no" onClick={() => setChosenLoc("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
-                            <><input type="checkbox" id="smokesometimes" className="appearance-none peer/sometimes"/><label for="smokesometimes" id="loc" onClick={() => setChosenLoc("Sometimes")} className="flex cursor-pointer peer-checked/sometimes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Sometimes</label></> 
+                            <><input type="checkbox" id="smokeyes" className="appearance-none peer/yes"/><label for="smokeyes" id="yes" onClick={() => setChosenSmoke("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-slate-300 border-2 rounded-3xl p-1 px-2">Yes</label></>
+                            <><input type="checkbox" id="smokeno" className="appearance-none peer/no"/><label for="smokeno" id="no" onClick={() => setChosenSmoke("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
+                            <><input type="checkbox" id="smokesometimes" className="appearance-none peer/sometimes"/><label for="smokesometimes" id="loc" onClick={() => setChosenSmoke("Sometimes")} className="flex cursor-pointer peer-checked/sometimes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Sometimes</label></> 
   
                     </div>
                 </div>
@@ -161,9 +169,9 @@ function Editprofile() {
             {drinkButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-4 pb-8">
                     <div className="flex w-[100vw]  text-sm gap-2">
-                            <><input type="checkbox" id="drinkyes" className="appearance-none peer/yes"/><label for="drinkyes" id="yes" onClick={() => setChosenLoc("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Yes</label></>
-                            <><input type="checkbox" id="drinkno" className="appearance-none peer/no"/><label for="drinkno" id="no" onClick={() => setChosenLoc("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
-                            <><input type="checkbox" id="drinksometimes" className="appearance-none peer/sometimes"/><label for="drinksometimes" id="loc" onClick={() => setChosenLoc("Sometimes")} className="flex cursor-pointer peer-checked/sometimes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Sometimes</label></> 
+                            <><input type="checkbox" id="drinkyes" className="appearance-none peer/yes"/><label for="drinkyes" id="yes" onClick={() => setChosenDrink("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Yes</label></>
+                            <><input type="checkbox" id="drinkno" className="appearance-none peer/no"/><label for="drinkno" id="no" onClick={() => setChosenDrink("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
+                            <><input type="checkbox" id="drinksometimes" className="appearance-none peer/sometimes"/><label for="drinksometimes" id="loc" onClick={() => setChosenDrink("Sometimes")} className="flex cursor-pointer peer-checked/sometimes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Sometimes</label></> 
   
                     </div>
                 </div>
@@ -181,8 +189,8 @@ function Editprofile() {
             {childButton ? 
                 <div className="flex flex-wrap gap-2 p-2 pl-4 pb-8">
                     <div className="flex w-[100vw]  text-sm gap-2">
-                            <><input type="checkbox" id="childyes" className="appearance-none peer/yes"/><label for="childyes" id="yes" onClick={() => setChosenLoc("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Yes</label></>
-                            <><input type="checkbox" id="childno" className="appearance-none peer/no"/><label for="childno" id="no" onClick={() => setChosenLoc("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
+                            <><input type="checkbox" id="childyes" className="appearance-none peer/yes"/><label for="childyes" id="yes" onClick={() => setChosenChild("Yes")} className="flex cursor-pointer peer-checked/yes:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">Yes</label></>
+                            <><input type="checkbox" id="childno" className="appearance-none peer/no"/><label for="childno" id="no" onClick={() => setChosenChil("No")} className="flex cursor-pointer peer-checked/no:bg-blue-300 hover:bg-blue-100 border-2 rounded-3xl p-1 px-2">No</label></>
   
                     </div>
                 </div>

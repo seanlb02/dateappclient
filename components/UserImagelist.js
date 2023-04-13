@@ -17,7 +17,7 @@ export default function Profilepage() {
 const arr = [1, 2, 3, 4, 5]
 const [camera, setCamera] = useState(false);
 const [imageurl, setImageurl] = useState("/placeholder.jpg");
-const url = "/next.svg"
+const url = "/placeholder.jpg"
 const firstname = "Firstname"
 const age = "age"
 
@@ -44,7 +44,9 @@ function handleTakePhoto (dataUri) {
 
         {arr.map(el => 
             
-            <><Box  className="relative h-fit" bg='white' height='340px' width='340px'><Image className="object-cover" src={imageurl} fill></Image><div className=" absolute w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl"><div className="flex gap-2 text-sm"></div></div></Box></>
+            <><Box  className="relative h-fit rounded-t-2xl" bg='white' height='340px' width='340px'><Image className="object-cover" src={imageurl} fill></Image><div className=" absolute w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl"><div className="flex gap-2 text-sm"></div></div>
+                <label><input type="checkbox" className="peer hidden"></input><Image src={url} className="relative peer-checked:z-40 object-cover rounded-ful" fill></Image><span className="absolute bg-white flex h-full w-full border border-slate-300 rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-lg p-5 text-left font-serif text-black"><div className="flex align-center font-serif">Caption/quote goes here</div></span></label>
+            </Box></>
         )}
     
     </SimpleGrid>
@@ -58,6 +60,6 @@ function handleTakePhoto (dataUri) {
 }
 
 const styles = {
-    grid: "flex flex-col items-center overflow-y-scroll scrollbar-hide w-full h-auto",
+    grid: "absolute flex flex-col items-center overflow-y-scroll scrollbar-hide w-full h-auto",
     image: "h-36 w-36",
 }

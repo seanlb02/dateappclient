@@ -11,7 +11,7 @@ function Useraccount() {
             <div>Name,</div><div>Age</div>
             <div className="flex items-center ml-auto mr-1 bg-black px-2 py-1 border-1 border-white text-lg text-white rounded-lg">Match</div>
         </div>
-        <div  className="flex flex-col h-[75vh]">
+        <div  className="flex flex-col">
             <UserImagelist/>
         </div>
 

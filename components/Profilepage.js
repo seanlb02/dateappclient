@@ -44,7 +44,15 @@ function handleTakePhoto (dataUri) {
 
         {arr.map(el => 
             
-            <><Box  className="flex relative h-fit" bg='white' height='340px' width='340px'><Image className="object-cover" src={imageurl} fill></Image><div className=" absolute w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-2xl"><div className="flex gap-2 align-center items-center text-sm"><Image src="/bin.png" width={25} height={10}></Image><div>Delete</div></div></div></Box></>
+            <Box className="relative rounded-t-2xl border border-1 border-slate-400" bg='white' height='320px' width='320px'>
+                
+                <label><input type="checkbox" className="peer hidden"></input><Image src='/placeholder.jpg' className="relative peer-checked:z-40 object-cover rounded-t-2xl" fill></Image><span className="absolute bg-white flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-lg p-5 text-left font-serif text-black"><div className="flex align-center font-serif">Caption/quote goes here</div></span></label>
+                
+                
+                <div className="flex absolute rounded-b-2xl  border-black -bottom-10 gap-2 align-center items-center text-sm"><Image src="/bin.png" width={25} height={10}></Image><div>Delete</div></div>
+            
+            
+            </Box>
         )}
     
     </SimpleGrid>
