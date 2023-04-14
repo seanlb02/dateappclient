@@ -56,7 +56,7 @@ const age = "age"
         </div>
         {filterOpen ?
                 <>
-                <div className="flex justify-center text-slate-700">Select a topic of (future) conversation</div>
+                <div className="flex justify-center pt-3 text-slate-700">Select a topic of (future) conversation</div>
                 <div className="flex flex-wrap gap-1 w-[100vw] p-4">
             
                 <><input type="checkbox" id="game" className="appearance-none peer/gaming"/><label for="game" id="gaming" onClick={() => setFilterValue("Gaming")} className="flex cursor-pointer peer-checked/gaming:bg-blue-300 hover:bg-blue-100 border text-slate-500 w-fit rounded-3xl p-1 px-2">Music</label></>
@@ -85,8 +85,8 @@ const age = "age"
             {arr.map((el, index) => 
                 
                 <div className={appear} key={index}>
-                    <Box className="relative rounded-t-2xl" bg='white' height='320px' width='320px'>
-                    <label><input type="checkbox" className="peer hidden"></input><Image src={url} className="relative peer-checked:z-40 object-cover rounded-t-2xl" fill></Image><span className="absolute bg-white flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-lg p-5 text-left font-serif text-black"><div className="flex align-center font-serif">Caption/quote goes here</div></span></label>
+                    <Box className="relative rounded-t-2xl border" bg='white' height='320px' width='320px'>
+                    <label><input type="checkbox" className="peer hidden"></input><Image src={url} className="relative peer-checked:z-40 object-cover rounded-t-2xl" fill></Image><span className="absolute bg-white flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-xl p-6 text-left font-serif text-black"><div className="flex align-center font-serif">Caption/quote goes here</div></span></label>
                     <div className="flex absolute align-center w-full rounded-b-2xl -bottom-10 h-12 left-0 right-0 p-3 bg-white text-xl">
                         <div className="flex  gap-3">
                             <div>{firstname},</div><div>Age</div>
@@ -111,6 +111,6 @@ const age = "age"
 
 const styles = {
     hidden: "hidden",
-    grid: "absolute scrollbar-hide w-full overflow-y-scroll h-[82vh] flex flex-col items-center",
+    grid: "absolute scrollbar-hide w-full overflow-y-scroll h-[83vh] flex flex-col items-center",
     image: "h-36 w-36",
 }

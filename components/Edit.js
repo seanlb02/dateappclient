@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
-
+import { countryList } from '@/data'
 
 function Editprofile() {
 
@@ -24,6 +24,7 @@ function Editprofile() {
     const [locButton, setLocButton] = useState();
     const [genderButton, setGenderButton] = useState();
     const [heightButton, setHeightButton] = useState();
+    const [natoButton, setNatoButton] = useState();
     const [smokeButton, setSmokeButton] = useState();
     const [drinkButton, setDrinkButton] = useState();
     const [childButton, setChildButton] = useState();
@@ -141,8 +142,26 @@ function Editprofile() {
             <div className= 'flex w-auto'>
                 <div className='flex text-sm align-center items-center border-1 bg-slate-100 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setHeightButton(true)}><Image src="/edit.png" width={20} height={17}></Image>Edit</div>
                 {heightButton ? <div className='flex text-sm align-center items-center border-1 bg-red-300 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setHeightButton(false)}>Cancel</div> : <></>}             
-                </div>
+            </div>
         </div>
+
+        <div>
+            <div className="flex p-2"><strong>Nationality</strong></div>
+            {natoButton ? 
+                <><input placeholder="Start typing" className="flex bg-white p-5 border-b-2 border-black w-[85vw] px-2 mx-5 scrollbar-hide" list="nationalities"/>
+                <datalist id="nationalities">
+                    {countryList.map((el, index) => <option value={el}/>)}
+                    
+                </datalist></>
+                :
+                <div className="p-2 pl-5 pb-8">Nationality will be rendered here </div>
+            }
+            <div className= 'flex mt-5 w-auto'>
+                <div className='flex text-sm align-center items-center border-1 bg-slate-100 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setNatoButton(true)}><Image src="/edit.png" width={20} height={17}></Image>Edit</div>
+                {natoButton ? <div className='flex text-sm align-center items-center border-1 bg-red-300 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setNatoButton(false)}>Cancel</div> : <></>}             
+            </div>
+        </div>
+
 
         <div>
             <div className="flex p-2"><strong>Smoker status</strong></div>
@@ -176,7 +195,7 @@ function Editprofile() {
                     </div>
                 </div>
             
-            : <div className="p-2 pl-5 pb-8">Smoke status will be rendered here </div>}
+            : <div className="p-2 pl-5 pb-8">Drink status will be rendered here </div>}
 
             <div className= 'flex w-auto'>
                 <div className='flex text-sm align-center items-center border-1 bg-slate-100 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setDrinkButton(true)}><Image src="/edit.png" width={20} height={17}></Image>Edit</div>
@@ -195,7 +214,7 @@ function Editprofile() {
                     </div>
                 </div>
             
-            : <div className="p-2 pl-5 pb-8">Smoke status will be rendered here </div>}
+            : <div className="p-2 pl-5 pb-8">Childre status will be rendered here </div>}
 
             <div className= 'flex w-auto'>
                 <div className='flex text-sm align-center items-center border-1 bg-slate-100 rounded-full px-3 py-1 flex w-auto ml-4 mb-4 gap-2' onClick={() => setChildButton(true)}><Image src="/edit.png" width={20} height={17}></Image>Edit</div>

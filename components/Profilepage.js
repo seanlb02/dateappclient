@@ -46,7 +46,7 @@ function handleTakePhoto (dataUri) {
             
             <Box className="relative rounded-t-2xl border border-1 border-slate-400" bg='white' height='320px' width='320px'>
                 
-                <label><input type="checkbox" className="peer hidden"></input><Image src='/placeholder.jpg' className="relative peer-checked:z-40 object-cover rounded-t-2xl" fill></Image><span className="absolute bg-white flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-lg p-5 text-left font-serif text-black"><div className="flex align-center font-serif">Caption/quote goes here</div></span></label>
+                <label><input type="checkbox" className="peer hidden"></input><Image src='/placeholder.jpg' className="relative peer-checked:z-40 object-cover rounded-t-2xl" fill></Image><span className="absolute bg-white flex h-full w-full rounded-t-2xl peer-checked:backdrop-blur items-start pt-16 text-lg p-5 text-left font-serif text-black"><div className="flex align-center text-2xl font-serif">Caption/quote goes here</div></span></label>
                 
                 
                 <div className="flex absolute rounded-b-2xl  border-black -bottom-10 gap-2 align-center items-center text-sm"><Image src="/bin.png" width={25} height={10}></Image><div>Delete</div></div>
@@ -66,6 +66,6 @@ function handleTakePhoto (dataUri) {
 }
 
 const styles = {
-    grid: "flex flex-col items-center items-center overflow-y-scroll scrollbar-hide w-auto h-auto",
+    grid: "flex mt-10 flex-col items-center items-center overflow-y-scroll scrollbar-hide w-auto h-auto",
     image: "h-36 w-36",
 }

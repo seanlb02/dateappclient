@@ -23,12 +23,11 @@ export default function Snapshot() {
         {hidden ? <></> : 
             <div className="flex flex-wrap w-full p-3 h-28 bg-white text-sm text-slate-500 md:text-lg gap-1 rounded-3xl ">
                 <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Male</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Waterloo</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">177cm</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Smoke | No</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Drink | Sometimes</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Drugs | No</div>
-                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">Children | No</div>
+                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2 gap-1"> <Image src="/location.png" height={18} width={18}/><div>Waterloo</div></div>
+                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2"> <Image src="/height.png" height={20} width={20}/><div>| 177cm</div></div>
+                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2 gap-2"> <Image src="/smoke.png" height={20} width={20}/><div>| No</div></div>
+                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2">  <Image src="/drink.png" height={20} width={20}/><div>| Sometimes</div></div>
+                <div className="flex rounded-xl pb-1 pt-1 px-2 h-fit flex align-center items-center border-2 gap-1"> <Image src="/pram.png" height={20} width={20}/><div>| No</div></div>
             </div>
         }
         <div className=" flex justify-center items-center w-auto pt-2 gap-2 m-2 xxs:text-xs">
